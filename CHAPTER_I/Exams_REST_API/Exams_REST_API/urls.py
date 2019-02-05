@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from api_exams.views import ExamsView, ExamView, TasksView, TaskView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('exams/', ExamsView.as_view()),
+    path('exams/<int:id>/', ExamView.as_view()),
+    path('tasks/', TasksView.as_view()),
+    path('tasks/<int:id>/', TaskView.as_view()),
 ]
