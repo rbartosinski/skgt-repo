@@ -1,5 +1,5 @@
 """
-PERMANENT ERROR with every tests
+PERMANENT ERROR with each test
 ---
 django.core.exceptions.ImproperlyConfigured:
 Requested setting REST_FRAMEWORK, but settings
@@ -17,9 +17,8 @@ from api_exams.views import ExamViewSet
 class TestViewSetCase(TestCase):
 
     def test_view_set(self):
-        pass
-        # request = APIRequestFactory().get("")
-        # exam_detail = ExamViewSet.as_view(actions={'get': 'retrieve'})
-        # exam = Exam.objects.create(title="First", description="My first exam")
-        # response = exam_detail(request, pk=exam.pk)
-        # self.assertEqual(response.status_code, 200)
+        request = APIRequestFactory().get("")
+        exam_detail = ExamViewSet.as_view(actions={'get': 'retrieve'})
+        exam = Exam.objects.create(title="First", description="My first exam")
+        response = exam_detail(request, pk=exam.pk)
+        self.assertEqual(response.status_code, 200)
