@@ -25,7 +25,7 @@ SECRET_KEY = 'c02j#%=j1ungny=q$vvidc4xw@$#4mo-yj8_wy=uoi-@(11mq&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '0.0.0.0']
 
 
 # Application definition
@@ -79,11 +79,11 @@ WSGI_APPLICATION = 'Exams_REST_API.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'exams_rest_db',
+        'NAME': 'postgres',
         'USER': 'postgres',
         'PASSWORD': 'admin',
-        'HOST': 'localhost',
-        'PORT': '',
+        'HOST': 'db',
+        'PORT': 5432
     }
 }
 
