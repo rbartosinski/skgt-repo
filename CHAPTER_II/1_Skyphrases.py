@@ -13,7 +13,7 @@ def check_keys_file(name_of_file):
         invalid_key = key_validator(key)
 
         # append invalid key to list
-        if invalid_key is True:
+        if invalid_key:
             invalid_keys_list.append(key)
 
     # finally, find number of good keys
