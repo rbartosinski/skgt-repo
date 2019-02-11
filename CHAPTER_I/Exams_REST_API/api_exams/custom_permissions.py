@@ -1,5 +1,5 @@
 from rest_framework import permissions
-from api_exams.models import Exam
+from .models import Exam
 
 
 # custom permission class for ExamViewSet

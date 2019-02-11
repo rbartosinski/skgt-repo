@@ -1,10 +1,10 @@
 from rest_framework.filters import OrderingFilter
 from rest_framework import permissions
-from api_exams.custom_permissions import IsOwnerOrReadOnly, IsOwnerExamOrReadOnly
-from .models import Exam, Task
-from .serializers import ExamSerializer, TaskSerializer
 from rest_framework.viewsets import ModelViewSet
 from rest_framework_extensions.mixins import NestedViewSetMixin
+from .custom_permissions import IsOwnerOrReadOnly, IsOwnerExamOrReadOnly
+from .models import Exam, Task
+from .serializers import ExamSerializer, TaskSerializer
 
 
 # 'api/exams' REST endpoint backend
