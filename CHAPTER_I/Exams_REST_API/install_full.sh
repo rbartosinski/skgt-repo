@@ -3,7 +3,7 @@
 # Full install script to Exams REST/API 
 # Author: Radek Bartosiński
 
-echo "Hello. This is script to install anything you want"
+echo "Hello. This is script to install anything you need"
 echo "to run Exams REST/API on your machine."
 echo "If you want to do this in a few next moments:"
 echo "- check your Internet connection,"
