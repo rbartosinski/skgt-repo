@@ -3,7 +3,7 @@
 # Full install script to Exams REST/API 
 # Author: Radek Bartosiński
 
-echo "Hello. This is script to install anything you want"
+echo "Hello. This is script to install anything you need"
 echo "to run Exams REST/API on your machine."
 echo "If you want to do this in a few next moments:"
 echo "- check your Internet connection,"
@@ -27,10 +27,10 @@ sudo apt install -y python3 virtualenv git
 echo
 echo "Installing PostgreSQL Database..."
 
-# installing PostgreSQL DB, creating db instance and importing test/dev data
+# installing PostgreSQL DB, creating new db
 sudo apt-get install postgresql postgresql-contrib
 psql postgres -c "CREATE DATABASE exams_rest_db WITH ENCODING 'UTF8'"
-psql exams_rest_db < pg_dump
+
 
 echo
 echo "Again - system updating..."
@@ -67,4 +67,6 @@ python3 -m pip install --upgrade pip
 
 cd CHAPTER_I/Exams_REST_API
 pip install -r requirements.txt
+psql exams_rest_db < pg_dump
+
 python manage.py runserver
